@@ -1,0 +1,9 @@
+{
+  "name": "alanp/gymbuddy-web",
+  "autoload": {
+    "psr-4": {
+      "GymbuddyWeb\\": "src/"
+    }
+  },
+  "require": {}
+}
