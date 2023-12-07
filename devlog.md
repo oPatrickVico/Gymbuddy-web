@@ -18,4 +18,6 @@ Qualquer pedaço de código que esteja compartilhado por todos os scripts irá p
 
 ---
 
-Estou tentando aplicar OOP. Criei a classe DefinedExercises, para controlar os exercícios adicionados, removidos ou movidos do local inicial.
+Estou tentando aplicar OOP. Criei a classe DefinedExercises, para controlar os exercícios adicionados, removidos ou movidos do local inicial
+
+# Dia 03

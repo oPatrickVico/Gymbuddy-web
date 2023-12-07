@@ -1,3 +1,27 @@
+function deleteButton(cb) {
+  const b = document.createElement('button');
+  b.classList.add('btn', 'btn-danger');
+  b.addEventListener('click', cb);
+  b.textContent = 'X';
+  return b;
+}
+
+function upArrow(cb) {
+  const b = document.createElement('button');
+  b.classList.add('btn', 'btn-secondary');
+  b.addEventListener('click', cb);
+  b.textContent = '^';
+  return b;
+}
+
+function downArrow(cb) {
+  const b = document.createElement('button');
+  b.classList.add('btn', 'btn-secondary');
+  b.addEventListener('click', cb);
+  b.textContent = 'v';
+  return b;
+}
+
 class DefinedExercises {
   _exercises = [];
 
@@ -8,6 +32,7 @@ class DefinedExercises {
     }
 
     this.deleteExercise.bind(this);
+    this.moveElement.bind(this);
   }
 
   render() {
@@ -17,13 +42,22 @@ class DefinedExercises {
       const el = document.createElement('li');
       el.textContent = `${ex.exerciseName}: ${ex.maxRep} reps`;
       el.setAttribute('data-index', '' + i);
-      const b = document.createElement('button');
-      b.classList.add('btn', 'btn-danger');
-      b.addEventListener('click', () => {
-        this.deleteExercise(i);
-      });
-      b.textContent = 'X';
-      el.appendChild(b);
+      el.setAttribute('value', JSON.stringify(ex));
+      el.appendChild(
+        upArrow(() => {
+          this.moveElement(i, -1);
+        })
+      );
+      el.appendChild(
+        downArrow(() => {
+          this.moveElement(i, 1);
+        })
+      );
+      el.appendChild(
+        deleteButton(() => {
+          this.deleteExercise(i);
+        })
+      );
       this.element.appendChild(el);
     }
   }
@@ -35,6 +69,15 @@ class DefinedExercises {
 
   deleteExercise(idx) {
     this._exercises.splice(idx, 1);
+    this.render();
+  }
+
+  moveElement(idx, amount) {
+    const newIdx = idx + amount;
+    if (newIdx >= this._exercises.length || newIdx < 0) return;
+    let temp = this._exercises[idx];
+    this._exercises[idx] = this._exercises[newIdx];
+    this._exercises[newIdx] = temp;
     this.render();
   }
 }

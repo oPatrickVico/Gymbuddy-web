@@ -24,7 +24,9 @@
     </label>
   </h1>
   <main id="ExerciseList">
-    <ul id="definedExercises"></ul>
+    <form action="" id="newRoutineForm" method=" POST">
+      <ul id="definedExercises"></ul>
+    </form>
     <form action="" id="newExerciseForm">
       <label for="newExerciseInput">
         Nome: &nbsp;
