@@ -45,3 +45,32 @@ Therefore, in this case, innerHTML manipulation is great.
 ---
 
 I learned how to use importing on basic broswer javascript: just make sure to type the script tag with module and import the correct relative name path, and you are good to go!
+
+# Dia 05
+
+O que era pra ser um problema simples, explodiu em complexidade.
+
+A forma de como eu crio elementos dinamicamente com javascript define como crio formulários. A forma de como eu crio os formulários dinamicamente no cliente define como os dados são enviados. A forma de como os dados são enviados é feita pelo comportamento padrão do formulário, ou pela api fetch.
+
+Depois disso, preciso ver como vou receber e analisar os dados enviados, além de sanitizar os dados recebidos.
+
+---
+
+Pararei de usar templates de sting e usarei o document.createElement mesmo. Usarei funções para cada elemento, e as colocarei todas no script `templates.js`. Isso permite:
+
+- a atribuição de callbacks em eventos mais facilmente do que usando querySelector;
+- atribuir o atributo `name` codificado para o php analisar e interpretar
+- fazer uso das referências dos elementos em javascript mesmo
+
+Farei um parsing dos dados enviados no $_POST mesmo. Agruparei os elementos:
+
+1. pelo index do exerício, depois
+2. Pelo campo da informação (nome, maxRep, initialWeight)
+
+Depois montarei as instruções sql para criar novas rotinas.
+
+---
+
+Exercícios não possuirão definições únicas. Codificar os tipos de exercício permitiria algumas funcionalidades interessantes, mas é uma trabalhareira desncessária.
+
+Um dia, talvez, eu crie um serviço separado, chamado ExerciseValidator, que avalia os exercícios conforme são criados, associa identificadores, corrige erros gramáticais e faz outras coisas. Basicamente, um assistente em cima do form atual.

@@ -1,12 +1,12 @@
 export const newExerciseRow = `
     <td>
-      <input type="text" required />
+      <input name="exerciseName" type="text" required />
     </td>
     <td>
-      <input type="number" min="0" required />
+      <input name="initialWeight" type="number" min="0" required />
     </td>
     <td>
-      <input type="number" min="0" required />
+      <input name="totalReps" type="number" min="0" required />
     </td>
     <td>
       <button class="btn btn-secondary" type="button">^</button>
