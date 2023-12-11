@@ -1,3 +1,5 @@
+<?php ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +13,7 @@
     rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
     crossorigin="anonymous">
-  <script type="module" src="builder/script.js" defer>
+  <script type="module" src="editor/script.js" defer>
   </script>
 </head>
 

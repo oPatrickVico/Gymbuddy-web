@@ -1,3 +1,10 @@
+- [Dia 02](#dia-02)
+- [Dia 03](#dia-03)
+- [Dia 04](#dia-04)
+- [Dia 05](#dia-05)
+- [Dia 06](#dia-06)
+- [Dia 07](#dia-07)
+
 # Dia 02
 
 Me deparei com um problema de roteamento.
@@ -62,7 +69,9 @@ Pararei de usar templates de sting e usarei o document.createElement mesmo. Usar
 - atribuir o atributo `name` codificado para o php analisar e interpretar
 - fazer uso das referências dos elementos em javascript mesmo
 
-Farei um parsing dos dados enviados no $_POST mesmo. Agruparei os elementos:
+No futuro, usaria uma library com lit-htm: um parser sem build que permite escrever jsx em strings, e o conecteria a preact. Não quero ficar pensando nesses problemas de reatividade mais.
+
+Farei um parsing dos dados enviados no $\_POST mesmo. Agruparei os elementos:
 
 1. pelo index do exerício, depois
 2. Pelo campo da informação (nome, maxRep, initialWeight)
@@ -74,3 +83,39 @@ Depois montarei as instruções sql para criar novas rotinas.
 Exercícios não possuirão definições únicas. Codificar os tipos de exercício permitiria algumas funcionalidades interessantes, mas é uma trabalhareira desncessária.
 
 Um dia, talvez, eu crie um serviço separado, chamado ExerciseValidator, que avalia os exercícios conforme são criados, associa identificadores, corrige erros gramáticais e faz outras coisas. Basicamente, um assistente em cima do form atual.
+
+---
+
+Achei um padrão interessante para reativdade baunilha: array privado de elementos crianças (`this.#children.push(this.#element.appendChild(newElement));`); seguindo de atualizações com rerender (`update() {this.#element.innerHTML = ''; this.#element.append(...this.#children)}`). Assim, posso manter tanto elementos, quanto strings, com mínima duplicação de dados!
+
+---
+
+addEventListener vs element.onevent
+
+addEventListeners give the element adding a listener itself as the context for the `this` keyword. With that context, you might find hard to handle class methods, but it is easy to handle the element itself.
+
+Conversely, element.onevent api stuff does NOT give you a `this` context, so it is better if you don't want to bind methods to classes. However, the addEventListener gives you a lot of options, like removing listeners, changing the capture order and many more!
+
+---
+
+Learning about dom manipulation methods and its quirks, I can remove the whole duplication of data and keeping the hypermedia on screen the actual state of my application. This is cool.
+
+(insertBefore exists, but not insertAfter. I am upset)
+
+# Dia 06
+
+Utilizando Date.now() pra criar ids de cada linha.
+
+Dependendo da ordem se manter correta para obter a sequencia de exercícios correta. A alternativa é criar um sistema estranho pra manter os indices em ordem.
+
+---
+
+Criei o sistema estranho, não foi tãaao ruim.
+
+Também aprendi que posso criar mapas ordenados usado a notação de brackets `id[atributo]`, onde a id agrupa os inputs e o atributo identifica cada input por seu nome.
+
+Muito bacana!
+
+# Dia 07
+
+.

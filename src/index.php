@@ -16,14 +16,14 @@
 <body>
   <nav>
     <ul>
-      <a href=" /src/routine/manager">
+      <a href="routine/manager">
         <li>Routine Manager</li>
       </a>
-      <a href="/src/routine/viewer">
+      <a href="routine/viewer">
         <li>Routine Viewer</li>
       </a>
-      <a href="/src/routine/builder">
-        <li>Routine Builder</li>
+      <a href="routine/editor">
+        <li>Routine Editor</li>
       </a>
     </ul>
   </nav>
