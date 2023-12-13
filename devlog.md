@@ -4,6 +4,7 @@
 - [Dia 05](#dia-05)
 - [Dia 06](#dia-06)
 - [Dia 07](#dia-07)
+- [Dia 08](#dia-08)
 
 # Dia 02
 
@@ -117,5 +118,17 @@ Também aprendi que posso criar mapas ordenados usado a notação de brackets `i
 Muito bacana!
 
 # Dia 07
+
+Depois de resolver alguns problemas no lado do cliente, preciso resolver a questão de banco de dados no lado do servidor. Preciso de modelos e controladores, pois usarei um MVC.
+
+Também quero criar um router no index para gerenciar a navegação.
+
+---
+
+Conclui com a criação de um script sql que gera todo o banco de dados que usarei.
+
+Como pretendo iterar e modificar o banco de dados, manterei um controle de versão.
+
+# Dia 08
 
 .

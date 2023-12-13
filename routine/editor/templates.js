@@ -13,10 +13,10 @@ export class ExerciseRow {
       this.fieldInput('text', id + '[title]'),
       this.fieldInput('number', id + '[initialWeight]', { min: '0' }),
       this.fieldInput('number', id + '[maxRep]', { min: 0 }),
+      this.operationButtons(),
       this.fieldInput('hidden', id + '[position]', {
         value: ExerciseRow.#definedExercises.childElementCount,
-      }),
-      this.operationButtons()
+      })
     );
     return self;
   }
