@@ -32,6 +32,7 @@
           <tr>
             <th>Exercício</th>
             <th>Peso initial (kg)</th>
+            <th>Número de Sets:</th>
             <th>Reps Totais</th>
             <th>Operações</th>
           </tr>
