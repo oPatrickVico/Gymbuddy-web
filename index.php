@@ -25,13 +25,13 @@ try {
 <body>
   <nav>
     <ul>
-      <a href="src/routine/manager">
+      <a href="src/view/routine/manager">
         <li>Routine Manager</li>
       </a>
-      <a href="src/routine/viewer">
+      <a href="src/view/routine/viewer">
         <li>Routine Viewer</li>
       </a>
-      <a href="src/routine/editor">
+      <a href="src/view/routine/editor">
         <li>Routine Editor</li>
       </a>
     </ul>
