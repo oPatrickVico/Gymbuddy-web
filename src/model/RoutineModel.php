@@ -5,7 +5,7 @@ namespace Model;
 class RoutineModel extends BaseModel { 
   
   public function __construct() {
-    BaseModel::__construct();
+    parent::__construct();
   }
 
   /**
