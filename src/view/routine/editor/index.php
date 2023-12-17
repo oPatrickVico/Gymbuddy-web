@@ -18,7 +18,8 @@
 </head>
 
 <body>
-  <form action="" method="POST" id="newRoutineForm">
+  <form action="/src/controller/createNewRoutine.php"
+    method="POST" id="newRoutineForm">
     <h1>
       <label for=" routineName">
         Routine: &nbsp;
@@ -26,6 +27,22 @@
           id="routineName" required />
       </label>
     </h1>
+    <div>
+      <label>Sun<input type="checkbox" value="0"
+          name="weekdays[]"></label>
+      <label>Mon<input type="checkbox" value="1"
+          name="weekdays[]"></label>
+      <label>Tue<input type="checkbox" value="2"
+          name="weekdays[]"></label>
+      <label>Wed<input type="checkbox" value="3"
+          name="weekdays[]"></label>
+      <label>Thu<input type="checkbox" value="4"
+          name="weekdays[]"></label>
+      <label>Fri<input type="checkbox" value="5"
+          name="weekdays[]"></label>
+      <label>Sat<input type="checkbox" value="6"
+          name="weekdays[]"></label>
+    </div>
     <main id="ExerciseList">
       <table class="container-fluid">
         <thead>

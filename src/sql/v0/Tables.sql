@@ -1,3 +1,5 @@
+drop database gymbuddy;
+
 CREATE DATABASE IF NOT EXISTS gymbuddy;
 
 use gymbuddy;
@@ -9,7 +11,7 @@ CREATE TABLE IF NOT EXISTS routines_v0 (
 );
 
 CREATE TABLE IF NOT EXISTS exercises_v0 (
-  exerciseName VARCHAR(100) NOT NULL UNIQUE,
+  exerciseName VARCHAR(100) NOT NULL,
   routine_id INT NOT NULL,
   setNumber INT NOT NULL,
   maxRep INT NOT NULL,

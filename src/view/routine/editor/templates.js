@@ -11,9 +11,10 @@ export class ExerciseRow {
   }
 
   constructor(id) {
+    id = 'ex-' + id;
     const self = document.createElement('tr');
     self.append(
-      this.fieldInput('text', id + '[title]'),
+      this.fieldInput('text', id + '[exerciseName]'),
       this.fieldInput('number', id + '[initialWeight]', { min: 0 }),
       this.fieldInput('number', id + '[setNumber]', { min: 0 }),
       this.fieldInput('number', id + '[maxRep]', { min: 0 }),
