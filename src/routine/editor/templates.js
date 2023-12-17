@@ -1,6 +1,9 @@
 export class ExerciseRow {
   static #definedExercises = document.getElementById('definedExercises');
 
+  /**
+   * Callback function meant to update the order index of each exercise after an opertation has been executed. This exists because I don't trust browsers to send the thigns in the order they are in the dom.
+   */
   static updateRows() {
     ExerciseRow.#definedExercises.childNodes.forEach((e, idx) => {
       console.log((e.querySelector('[type=hidden]').value = idx));
@@ -12,8 +15,8 @@ export class ExerciseRow {
     self.append(
       this.fieldInput('text', id + '[title]'),
       this.fieldInput('number', id + '[initialWeight]', { min: 0 }),
-      this.fieldInput('number', id + '[maxRep]', { min: 0 }),
       this.fieldInput('number', id + '[setNumber]', { min: 0 }),
+      this.fieldInput('number', id + '[maxRep]', { min: 0 }),
       this.operationButtons(),
       this.fieldInput('hidden', id + '[position]', {
         value: ExerciseRow.#definedExercises.childElementCount,
@@ -23,7 +26,7 @@ export class ExerciseRow {
   }
 
   /**
-   *
+   * Template for creating an action button
    * @param {string} label
    * @param {string} btnClass
    * @param {function} cb
@@ -39,7 +42,7 @@ export class ExerciseRow {
   }
 
   /**
-   *
+   * Generates buttons to move and delete that exercise\row
    * @returns DOM element reference
    */
   operationButtons() {
@@ -66,7 +69,7 @@ export class ExerciseRow {
   }
 
   /**
-   *
+   * Template for creating input fields
    * @param {string} type the type of input field
    * @param {string} name the name given in the form
    * @param {Record<string, string>} attrs any other attributes to add

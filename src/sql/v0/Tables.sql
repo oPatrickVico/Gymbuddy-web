@@ -3,9 +3,9 @@ CREATE DATABASE IF NOT EXISTS gymbuddy;
 use gymbuddy;
 
 CREATE TABLE IF NOT EXISTS routines_v0 (
-  id INT PRIMARY KEY,
+  id INT AUTO_INCREMENT PRIMARY KEY, 
   weekDays VARCHAR(7),
-  name VARCHAR(255)
+  routineName VARCHAR(255)
 );
 
 CREATE TABLE IF NOT EXISTS exercises_v0 (
@@ -14,6 +14,6 @@ CREATE TABLE IF NOT EXISTS exercises_v0 (
   setNumber INT NOT NULL,
   maxRep INT NOT NULL,
   initialWeight INT NOT NULL,
-  PRIMARY KEY (exerciseName, routine_id),
+  id INT AUTO_INCREMENT PRIMARY KEY, 
   FOREIGN KEY (routine_id) REFERENCES routines_v0(id)
 );

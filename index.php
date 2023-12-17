@@ -1,3 +1,12 @@
+<?php 
+
+try {
+  require_once "vendor/autoload.php";
+} catch (Exception $e) {
+  echo $e->getMessage() ;
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,13 +25,13 @@
 <body>
   <nav>
     <ul>
-      <a href="routine/manager">
+      <a href="src/routine/manager">
         <li>Routine Manager</li>
       </a>
-      <a href="routine/viewer">
+      <a href="src/routine/viewer">
         <li>Routine Viewer</li>
       </a>
-      <a href="routine/editor">
+      <a href="src/routine/editor">
         <li>Routine Editor</li>
       </a>
     </ul>

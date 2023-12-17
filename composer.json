@@ -2,8 +2,12 @@
   "name": "alanp/gymbuddy-web",
   "autoload": {
     "psr-4": {
-      "GymbuddyWeb\\": "src/"
+      "GymbuddyWeb\\": "src/",
+      "Model\\": "src/model/",
+      "Utils\\": "src/utils/"
     }
   },
-  "require": {}
+  "require": {
+    "vlucas/phpdotenv": "^5.6"
+  }
 }
